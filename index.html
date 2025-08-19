@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crisler’s Repair & Restore LLC — Mobile Mechanic in Memphis, TN</title>
+  <meta name="description" content="Veteran‑owned, licensed & insured mobile mechanic serving Memphis and the Mid‑South. We come to you for diagnostics, batteries/electrical, brakes, maintenance, and restorations." />
+  <meta property="og:title" content="Crisler’s Repair & Restore — Mobile Mechanic" />
+  <meta property="og:description" content="We come to you. Veteran‑owned • Licensed & insured • Memphis, TN" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b5fff" />
+  <style>
+    :root{
+      --bg:#0b0f1a;      /* deep navy */
+      --card:#10182a;    /* card navy */
+      --ink:#eaf2ff;     /* near-white */
+      --muted:#aec0e8;   /* muted text */
+      --brand:#0b5fff;   /* blue */
+      --brand-2:#00d4ff; /* cyan */
+      --accent:#00c853;  /* green */
+      --danger:#ff5252;  /* red */
+      --shadow:0 20px 50px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:radial-gradient(1200px 800px at 15% -10%, #13203e 0%, transparent 50%),
+      radial-gradient(1000px 700px at 110% 10%, #0b2748 0%, transparent 40%), var(--bg);}    
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px,92vw);margin:0 auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(10,14,26,.6);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand .logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;box-shadow:var(--shadow)}
+    .brand .logo svg{filter:drop-shadow(0 6px 12px rgba(11,95,255,.35))}
+    .nav-cta{display:flex;align-items:center;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:none}
+    .btn.green{background:linear-gradient(135deg,#00a84f,var(--accent));border:none}
+    .btn:hover{transform:translateY(-1px)}
+
+    .hero{position:relative;overflow:hidden}
+    .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:48px 0 24px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--muted);font-weight:600}
+    h1{font-size:clamp(28px,5vw,48px);line-height:1.06;margin:12px 0 14px}
+    .lead{color:var(--muted);font-size:clamp(16px,1.5vw,18px)}
+
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:8px 10px;border-radius:12px;color:var(--muted);font-weight:700}
+
+    .section{padding:52px 0}
+    .section h2{font-size:clamp(22px,3.3vw,34px);margin:0 0 10px}
+    .section p{color:var(--muted)}
+
+    .grid{display:grid;gap:18px}
+    .grid.s3{grid-template-columns:repeat(3,1fr)}
+    .grid.s2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:920px){.hero-inner{grid-template-columns:1fr}.grid.s3{grid-template-columns:1fr}.grid.s2{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 6px}
+    .service-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(11,95,255,.25),rgba(0,212,255,.25));border:1px solid rgba(255,255,255,.12)}
+
+    .pricing .price{font-size:30px;font-weight:900}
+    .pricing small{color:var(--muted)}
+
+    .testimonials{position:relative}
+    .slider{display:flex;gap:18px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+    .slide{min-width:min(520px,92%);scroll-snap-align:start}
+    blockquote{margin:0;color:var(--ink);font-size:18px;line-height:1.5}
+    blockquote footer{margin-top:10px;color:var(--muted)}
+
+    .faq details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;margin-bottom:10px}
+    .faq summary{cursor:pointer;font-weight:800}
+
+    .cta{position:sticky;bottom:14px}
+    .cta .bar{display:flex;gap:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));border-radius:16px;padding:10px;border:1px solid rgba(255,255,255,.2);box-shadow:var(--shadow)}
+    .cta a{flex:1;text-align:center;background:rgba(0,0,0,.18);padding:12px;border-radius:12px;font-weight:800}
+
+    .foot{padding:24px 0 36px;color:var(--muted);border-top:1px solid rgba(255,255,255,.08);margin-top:36px}
+    .kicker{font-weight:800;color:#a4e8ff}
+
+    .media-card{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--card);border:1px solid rgba(255,255,255,.08)}
+    .media-card img{width:100%;height:260px;object-fit:cover;filter:brightness(.8)}
+    .media-card .cap{position:absolute;inset:auto 14px 14px 14px;background:rgba(0,0,0,.45);padding:12px;border-radius:12px}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Crisler’s Repair & Restore LLC",
+    "url": "",
+    "telephone": "+1-901-496-5553",
+    "email": "Kyle.crisler@crislersrnr.com",
+    "areaServed": [{"@type":"City","name":"Memphis"},{"@type":"Place","name":"Mid-South"}],
+    "servesCuisine": null,
+    "description": "Veteran‑owned, licensed & insured mobile mechanic serving Memphis and the Mid‑South. On‑site diagnostics, batteries/electrical, brakes/suspension, maintenance, and restorations.",
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"20:00"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand" aria-label="Crisler’s Repair & Restore">
+        <div class="logo" aria-hidden="true">
+        <img src="KyleLogo.jpeg" width="300px" alt="Crisler's Repair & Restore Logo" class="logo" />
+        </div>
+        <div>
+          <div style="font-size:15px;opacity:.8;letter-spacing:.6px">Veteran‑Owned</div>
+          <div style="font-size:20px">Crisler’s Repair & Restore</div>
+        </div>
+      </div>
+      <div class="nav-cta">
+        <a class="btn" href="mailto:Kyle.crisler@crislersrnr.com?subject=Service%20Request%20(Memphis)&body=Hi%20Crisler%27s%2C%20my%20vehicle%20is%3A%20%5Byear%20make%20model%5D.%20The%20issue%3A%20%5Bdescribe%5D.%20My%20location%3A%20%5Baddress%2Farea%5D.%20Preferred%20time%3A%20%5Btoday%2Ftomorrow%5D.%20Please%20quote.%20">Email</a>
+        <a class="btn primary" href="tel:+19014965553">Call (901) 496‑5553</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="pill" aria-label="Memphis, TN">Memphis • Mobile Mechanic</div>
+        <h1>We come to you — expert mobile auto repair & restorations</h1>
+        <p class="lead">Licensed & insured (TN Lic. #002006977). On‑site diagnostics, batteries & electrical, brakes & suspension, oil & maintenance, and full restoration projects. Save the tow — we service you at home, work, or roadside.</p>
+        <div class="badges" aria-label="Highlights">
+          <span class="badge">⏱️ Same‑day when available</span>
+          <span class="badge">🧰 ASE‑style standards</span>
+          <span class="badge">🪖 Veteran‑owned local</span>
+          <span class="badge">📍 Memphis & Mid‑South</span>
+        </div>
+        <div class="nav-cta" style="margin-top:8px">
+          <a class="btn green" href="sms:+19014965553?&body=Hi%20Crisler%27s%2C%20I%20need%20mobile%20service%20for%20%5Byear%20make%20model%5D.%20Issue%3A%20%5Bdescribe%5D.%20Location%3A%20%5Barea%5D.">Text for Quote</a>
+          <a class="btn" href="#services">See Services</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Quick facts">
+        <div class="grid s2">
+          <div class="card">
+            <div class="service-icon" aria-hidden="true">🔎</div>
+            <h3>Up‑front quotes</h3>
+            <p class="lead">Clear diagnostics and no‑surprise pricing. Parts and travel are itemized on every invoice.</p>
+          </div>
+          <div class="card">
+            <div class="service-icon" aria-hidden="true">⚡</div>
+            <h3>Flexible hours</h3>
+            <p class="lead">Open 7 days • 8a–8p. After‑hours by request when possible.</p>
+          </div>
+        </div>
+        <div class="grid s2" style="margin-top:12px">
+          <div class="card">
+            <div class="service-icon" aria-hidden="true">🛡️</div>
+            <h3>Licensed & insured</h3>
+            <p class="lead">Professional service you can trust. TN License #002006977.</p>
+          </div>
+          <div class="card">
+            <div class="service-icon" aria-hidden="true">🚗</div>
+            <h3>We come to you</h3>
+            <p class="lead">Home driveways, office lots, or roadside shoulder — we’ve got you covered.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2>What we fix</h2>
+      <p>From quick battery swaps to deeper electrical diagnostics and restorations, Crisler’s Repair & Restore handles most passenger vehicles and light trucks on‑site.</p>
+      <div class="grid s3" style="margin-top:16px">
+        <div class="card">
+          <div class="service-icon">🧪</div>
+          <h3>Diagnostics</h3>
+          <p>Check‑engine, drivability issues, overheating, no‑start/rough idle, sensors & codes read with pro‑level tooling.</p>
+        </div>
+        <div class="card">
+          <div class="service-icon">🔋</div>
+          <h3>Battery & Electrical</h3>
+          <p>Battery testing/replacement, alternators, starters, parasitic draws, lighting, fuses & wiring.</p>
+        </div>
+        <div class="card">
+          <div class="service-icon">🛑</div>
+          <h3>Brakes & Suspension</h3>
+          <p>Pads/rotors, calipers, wheel bearings, control arms, shocks/struts, tie‑rods & ball joints.</p>
+        </div>
+        <div class="card">
+          <div class="service-icon">🧰</div>
+          <h3>Maintenance</h3>
+          <p>Oil & filters, belts & hoses, fluids, tune‑ups, spark plugs/coils, roadside minor fixes.</p>
+        </div>
+        <div class="card">
+          <div class="service-icon">🧼</div>
+          <h3>Restoration</h3>
+          <p>Project consulting, parts sourcing, mechanical restoration planning and staged work.</p>
+        </div>
+        <div class="card">
+          <div class="service-icon">❄️</div>
+          <h3>Seasonal Prep</h3>
+          <p>Trip checks, battery & coolant health, tire inspections, and readiness reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing">
+    <div class="container">
+      <h2>Transparent quotes</h2>
+      <p>Every job begins with a quick intake (vehicle, symptoms, location). You’ll receive a clear estimate before work begins. Parts, labor, and travel are line‑itemed for full transparency.</p>
+      <div class="grid s3" style="margin-top:16px">
+        <div class="card">
+          <h3>On‑site Diagnostic</h3>
+          <div class="price">Get a fast quote</div>
+          <small>Typical visit includes code scan, visual inspection, and a repair plan.</small>
+          <div style="margin-top:12px"><a class="btn primary" href="sms:+19014965553?&body=Vehicle%3A%20%5Byear%20make%20model%5D.%20Issue%3A%20%5Bdescribe%5D.%20Location%3A%20%5Barea%5D.%20Please%20estimate%20diagnostic.">Text for Diagnostic</a></div>
+        </div>
+        <div class="card">
+          <h3>Battery / Starter / Alternator</h3>
+          <div class="price">Itemized parts & labor</div>
+          <small>We’ll test, quote options, and complete the repair where your car sits.</small>
+          <div style="margin-top:12px"><a class="btn" href="mailto:Kyle.crisler@crislersrnr.com?subject=Quote%20request%20(Battery%2FStarter%2FAlternator)">Email for Options</a></div>
+        </div>
+        <div class="card">
+          <h3>Brakes & Suspension</h3>
+          <div class="price">Clear, up‑front pricing</div>
+          <small>Quality parts available on request. We’ll show you what we replaced.</small>
+          <div style="margin-top:12px"><a class="btn" href="tel:+19014965553">Call to Book</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Recent work & tips</h2>
+      <p>Follow along with quick before/afters and helpful maintenance tips.</p>
+      <div class="grid s3" style="margin-top:16px">
+        <article class="media-card">
+          <img alt="Mechanic performing driveway brake service" src="https://images.unsplash.com/photo-1542367592-8849eb8a3b55?w=1200&q=80"/>
+          <div class="cap"><strong>Driveway brake job</strong><div class="muted">Pads & rotors replaced same‑day.</div></div>
+        </article>
+        <article class="media-card">
+          <img alt="Battery testing under hood" src="https://images.unsplash.com/photo-1515920010264-2f6f1a9b1c8b?w=1200&q=80"/>
+          <div class="cap"><strong>Battery & charging test</strong><div class="muted">Verified alternator output before replacing.</div></div>
+        </article>
+        <article class="media-card">
+          <img alt="Mechanic scanning codes with OBD tool" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1200&q=80"/>
+          <div class="cap"><strong>OBD scan & plan</strong><div class="muted">Clear findings and parts list before work.</div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <div class="container">
+      <h2>What neighbors say</h2>
+      <p>Local word‑of‑mouth matters most. Here’s how customers describe working with us.</p>
+      <div class="slider" aria-label="Testimonials slider">
+        <div class="slide card">
+          <blockquote>
+            “They came out after work, diagnosed a no‑start, and had me running the same evening. Friendly, professional, and fair.”
+            <footer>— Memphis customer (Nextdoor)</footer>
+          </blockquote>
+        </div>
+        <div class="slide card">
+          <blockquote>
+            “Great communication and follow‑up. A week later they checked in to make sure everything was still running right.”
+            <footer>— Midtown customer</footer>
+          </blockquote>
+        </div>
+        <div class="slide card">
+          <blockquote>
+            “Saved me a tow and half a day off work. Transparent quote, itemized invoice, zero hassle.”
+            <footer>— East Memphis customer</footer>
+          </blockquote>
+        </div>
+      </div>
+      <div style="margin-top:14px" class="nav-cta">
+        <a class="btn" href="#contact">Book service</a>
+        <a class="btn primary" href="#reviews">Leave a review</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Do you offer evening or weekend service?</summary>
+        <p>Yes — we’re open 7 days, 8a–8p. After‑hours appointments may be available; text for fastest response.</p>
+      </details>
+      <details>
+        <summary>How do quotes & invoices work?</summary>
+        <p>We provide an estimate before work begins. Your final invoice itemizes parts, labor, and travel so you can see exactly what you paid for. Digital receipts are sent via text or email.</p>
+      </details>
+      <details>
+        <summary>What areas do you serve?</summary>
+        <p>Memphis metro and the Mid‑South. Text your cross‑streets and we’ll confirm ETA.</p>
+      </details>
+      <details>
+        <summary>What if my car can’t be repaired on‑site?</summary>
+        <p>We’ll provide clear next steps and options. If specialized equipment or a lift is required, we’ll help coordinate the best solution.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Book service</h2>
+      <div class="grid s2" style="margin-top:12px">
+        <div class="card">
+          <h3>Call or text</h3>
+          <p class="kicker">(901) 496‑5553</p>
+          <div class="nav-cta" style="margin-top:6px">
+            <a class="btn primary" href="tel:+19014965553">Call now</a>
+            <a class="btn" href="sms:+19014965553?&body=Hi%20Crisler%27s%2C%20I%20need%20mobile%20service%20for%20%5Byear%20make%20model%5D.%20Issue%3A%20%5Bdescribe%5D.%20Location%3A%20%5Barea%5D.%20Preferred%20time%3A%20%5Btoday%2Ftomorrow%5D.">Text us</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Email</h3>
+          <p class="kicker">Kyle.crisler@crislersrnr.com</p>
+          <div class="nav-cta" style="margin-top:6px">
+            <a class="btn" href="mailto:Kyle.crisler@crislersrnr.com?subject=Service%20Request%20(Memphis)&body=Hi%20Crisler%27s%2C%20my%20vehicle%20is%3A%20%5Byear%20make%20model%5D.%20The%20issue%3A%20%5Bdescribe%5D.%20My%20location%3A%20%5Baddress%2Farea%5D.%20Preferred%20time%3A%20%5Btoday%2Ftomorrow%5D.%20Please%20quote.%20">Send email</a>
+            <a class="btn" href="#">Add to contacts (vCard)</a>
+          </div>
+          <p style="color:var(--muted);margin-top:6px">TN License #002006977 • Hours: 8a–8p daily</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="container cta" aria-label="Quick actions">
+    <div class="bar">
+      <a href="tel:+19014965553">Call</a>
+      <a href="sms:+19014965553?&body=Hi%20Crisler%27s%2C%20I%20need%20mobile%20service">Text</a>
+      <a href="mailto:Kyle.crisler@crislersrnr.com?subject=Service%20Request%20(Memphis)">Email</a>
+    </div>
+  </aside>
+
+  <footer class="foot">
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+        <div>© <span id="year"></span> Crisler’s Repair & Restore LLC • Memphis, TN</div>
+        <div>Veteran‑Owned • Licensed & Insured</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
